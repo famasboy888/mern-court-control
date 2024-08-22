@@ -23,7 +23,7 @@ function App() {
   return (
     <div>
       <h1>Title!</h1>
-      <h1 className="text-3xl font-bold underline">
+      <h1 className="text-3xl font-bold underline text-red-500">
         Message from Backend: {message}
       </h1>
     </div>
