@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .layout {
+    @apply flex flex-col items-center;
+  }
+  .nav-links {
+    @apply flex justify-center items-center gap-2 p-2;
+
+    > * {
+      @apply border-black border-2 p-2;
+    }
+
+    .active {
+      @apply bg-black text-white;
+    }
+  }
+}
