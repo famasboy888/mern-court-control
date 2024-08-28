@@ -10,6 +10,7 @@ export { default as EditEvent } from "./EditEvent";
 export { default as Error } from "./Error";
 export { default as EventAdmin } from "./EventAdmin";
 export { default as EventLayout } from "./EventLayout";
+export { default as EventQueue } from "./EventQueue";
 export { default as EventStats } from "./EventStats";
 export { default as GroupInfo } from "./GroupInfo";
 export { default as GroupLayout } from "./GroupLayout";

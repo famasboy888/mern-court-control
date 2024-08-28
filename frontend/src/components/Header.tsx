@@ -29,7 +29,7 @@ const Header = () => {
             ))}
           </nav>
           <button
-            className="text-[2rem] sm:hidden"
+            className="text-[2rem] min-[576px]:hidden"
             onClick={() => setToggleMenu(!toggleMenu)}
           >
             {toggleMenu ? <MdClose /> : <MdMenu />}

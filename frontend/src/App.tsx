@@ -12,6 +12,7 @@ import {
   Error,
   EventAdmin,
   EventLayout,
+  EventQueue,
   EventStats,
   GroupInfo,
   GroupLayout,
@@ -20,7 +21,6 @@ import {
   Profile,
   Register,
 } from "./pages";
-import EventQueue from "./pages/EventQueue";
 
 function App() {
   const user = {
