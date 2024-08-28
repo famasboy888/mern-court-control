@@ -24,7 +24,7 @@ import EventQueue from "./pages/EventQueue";
 
 function App() {
   const user = {
-    auth: true,
+    auth: false,
   };
 
   return (
