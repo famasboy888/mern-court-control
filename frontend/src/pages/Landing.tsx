@@ -1,14 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { Header } from "../components";
 
 const Landing = () => {
   return (
-    <div className="nav-links">
-      <NavLink to="login" end>
-        Login
-      </NavLink>
-      <NavLink to="register">Register</NavLink>
-      <NavLink to="about">About</NavLink>
-      <NavLink to="dashboard">Open Dashboard</NavLink>
+    <div>
+      <Header />
     </div>
   );
 };
