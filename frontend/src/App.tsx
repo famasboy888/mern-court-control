@@ -21,6 +21,7 @@ import {
   Register,
 } from "./pages";
 import EventQueue from "./pages/EventQueue";
+
 function App() {
   const user = {
     auth: true,
