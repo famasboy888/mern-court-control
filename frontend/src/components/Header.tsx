@@ -12,14 +12,14 @@ const Header = () => {
       <div className="flex items-center justify-between h-full p-2 w-[var(--fluid-width)] max-w-[var(--max-width)] ">
         <Logo path="/" hideText={false} />
         <div className="flex gap-2">
-          <button className="text-[2rem]">
-            <MdDarkMode />
-          </button>
-          <nav className="flex gap-1 items-center max-sm:hidden">
+          <nav className="flex gap-4 items-center max-sm:hidden">
+            <button className="text-[2rem]">
+              <MdDarkMode />
+            </button>
             {homeLinks.map(({ text, path }) => (
               <NavLink
-                className={`btn capitalize ${
-                  text === "register" ? "btn-primary" : ""
+                className={`capitalize ${
+                  text === "register" ? "btn btn-primary" : ""
                 }`}
                 key={text}
                 to={path}
