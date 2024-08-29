@@ -11,7 +11,7 @@ const Logo = ({ path, hideText = true, className }: LogoProps) => {
   return (
     <Link
       to={path}
-      className={`flex items-center gap-[0.5rem] h-full min-w-fit ${className}`}
+      className={`flex items-center gap-[0.5rem] min-w-fit ${className}`}
     >
       <img src={cc_logo_round} alt="cc" className="h-full" />
       <span

@@ -7,10 +7,10 @@ const Register = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
-    <>
-      <article className="mt-10 grid grid-cols-1 p-[1rem] rounded-[var(--border-radius)] max-w-[576px] mx-auto w-[var(--fluid-width)] border shadow-sm md:p-[2rem]">
+    <div className="py-5 h-full min-h-screen bg-[var(--grey-300)]">
+      <article className="mt-5 grid grid-cols-1 p-[1rem] rounded-[var(--border-radius)] max-w-[576px] mx-auto w-[var(--fluid-width)] bg-[var(--grey-100)] border shadow-sm md:p-[2rem]">
         <div className="flex flex-col items-center gap-2 text-center">
-          <Logo path="" hideText className="mt-6 w-[5rem] h-[5rem]" />
+          <Logo path="" hideText className="mt-6 h-[5rem]" />
           <h2 className="mt-6 font-bold">Welcome to Court Control!</h2>
           <p className="">Make court queueing easier and hassle free!</p>
         </div>
@@ -43,7 +43,7 @@ const Register = () => {
           </span>
         </form>
       </article>
-    </>
+    </div>
   );
 };
 
