@@ -12,17 +12,19 @@ const Landing = () => {
             <img
               src={badminton_smash}
               alt="badminton-smash"
-              className=" w-[90%]"
+              className=" w-[70%] md:w-[80%]"
             />
           </div>
           <article className="flex flex-col justify-center gap-2 max-sm:-mt-20 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-3">
             <div>
-              <h1 className=" font-bold py-2">Take charge of your matches</h1>
+              <h1 className="text-[clamp(2rem,4vw,5rem)] font-bold py-2">
+                Take charge of your matches
+              </h1>
               <p className="mt-1 py-2">
                 Manage queueing, sequencing and tournaments all in one web app!
               </p>
             </div>
-            <div className="flex flex-col gap-1 md:flex-row md:text-nowrap">
+            <div className="flex flex-col gap-1 md:flex-row md:text-nowrap md:mt-5">
               <Link to="/login" className="btn btn-primary">
                 Start Queueing
               </Link>

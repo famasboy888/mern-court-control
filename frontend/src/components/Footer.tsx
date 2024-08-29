@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div className="bg-[var(--grey-200)]">
-      <p className="text-center mx-auto text-sm p-2 max-w-[var(--max-width)] w-[var(--fluid-width)]">
+      <p className="text-center mx-auto text-sm p-2 max-w-[var(--max-width)] w-[var(--fluid-width)] sticky bottom-0">
         &copy; 2024 Court Control. All Rights Reserved.
       </p>
     </div>
