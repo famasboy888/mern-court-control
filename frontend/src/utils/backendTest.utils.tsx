@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { BACKEND_PORT, BACKEND_URL } from "./backendUrl";
+import { BACKEND_PORT, BACKEND_URL, ENV } from "./backendUrl";
 
 const BackendTest = () => {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState<string>("");
   const hostname = window.location.hostname;
   const url =
-    hostname === "localhost"
-      ? BACKEND_URL
-      : `http://${hostname}:${BACKEND_PORT}`;
+    ENV === "development" && hostname !== "localhost"
+      ? `http://${hostname}:${BACKEND_PORT}`
+      : BACKEND_URL;
 
   const fetchMessage = async () => {
     try {
