@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { FormRow, Logo } from "../components";
 import { useState } from "react";
-import { BACKEND_URL, getLocalURL } from "../utils/backendUrl";
+import { getLocalURL } from "../utils/backendUrl";
 import { toast } from "react-toastify";
 
 const Register = () => {
