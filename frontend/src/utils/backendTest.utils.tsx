@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
-import { BACKEND_PORT, BACKEND_URL, ENV } from "./backendUrl";
+import { getLocalURL } from "./backendUrl";
 
 const BackendTest = () => {
   const [message, setMessage] = useState<string>("");
-  const hostname = window.location.hostname;
-  const url =
-    ENV === "development" && hostname !== "localhost"
-      ? `http://${hostname}:${BACKEND_PORT}`
-      : BACKEND_URL;
+  const url = getLocalURL(window.location.hostname);
 
   const fetchMessage = async () => {
     try {
@@ -29,13 +25,13 @@ const BackendTest = () => {
 
   return (
     <div className="text-xs">
-      Backend:{" "}
+      Backend: <span>{url + " "}</span>
       <span
         className={`font-bold  ${
           message === "ok" ? "text-[var(--primary-500)]" : "text-red-600"
         }`}
       >
-        {message}
+        ({message})
       </span>
     </div>
   );

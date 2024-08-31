@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { FormRow, Logo } from "../components";
 import { useState } from "react";
-import { BACKEND_URL } from "../utils/backendUrl";
+import { BACKEND_URL, getLocalURL } from "../utils/backendUrl";
 import { toast } from "react-toastify";
 
 const Register = () => {
@@ -18,7 +18,8 @@ const Register = () => {
       return;
     }
     try {
-      const res = await fetch(`${BACKEND_URL}/api/auth/register`, {
+      const url = getLocalURL(window.location.hostname);
+      const res = await fetch(`${url}/api/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
