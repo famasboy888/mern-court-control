@@ -6,9 +6,9 @@ import rateLimit from "express-rate-limit";
 const router = Router();
 
 const apiLimiter = rateLimit({
-  windowMs: 1 * 60 * 1000,
-  limit: 5,
-  message: { errorMessage: "IP rate limit exceeded. Retry after 1 minute" },
+  windowMs: 15 * 60 * 1000,
+  limit: 20,
+  message: { errorMessage: "IP rate limit exceeded. Retry after 15 minutes" },
 });
 
 router.post("/register", apiLimiter, validateRegisterInput, registerUser);
