@@ -4,7 +4,6 @@ import { NextFunction, Request, Response } from "express";
 import userModel from "../models/user.model.js";
 
 const withValidationErrors = (validateValues: ValidationChain[]) => {
-  console.log("ran");
   return [
     ...validateValues,
     (req: Request, res: Response, next: NextFunction) => {
@@ -36,4 +35,13 @@ export const validateRegisterInput = withValidationErrors([
     .withMessage("password is required")
     .isLength({ min: 8 })
     .withMessage("password must be at least 8 characters"),
+]);
+
+export const validateLoginInput = withValidationErrors([
+  body("email")
+    .notEmpty()
+    .withMessage("email is required")
+    .isEmail()
+    .withMessage("email is invalid"),
+  body("password").notEmpty().withMessage("password is required"),
 ]);
