@@ -203,6 +203,12 @@ h5 {
     background-color: transparent;
   }
 
+  /* Checkboxes */
+
+  :checked {
+    accent-color: var(--primary-400);
+  }
+
   /****************  CUSTOM CSS ********************/
 
   .layout {
