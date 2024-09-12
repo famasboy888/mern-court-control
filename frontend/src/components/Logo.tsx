@@ -4,11 +4,15 @@ import { cc_logo_round } from "../assets/images";
 type LogoProps = {
   path: string;
   hideText?: boolean;
+  className?: string;
 };
 
-const Logo = ({ path, hideText = true }: LogoProps) => {
+const Logo = ({ path, hideText = true, className }: LogoProps) => {
   return (
-    <Link to={path} className="flex items-center gap-[0.5rem] h-full min-w-fit">
+    <Link
+      to={path}
+      className={`flex items-center gap-[0.5rem] min-w-fit ${className}`}
+    >
       <img src={cc_logo_round} alt="cc" className="h-full" />
       <span
         hidden={hideText}

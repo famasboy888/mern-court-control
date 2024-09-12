@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div className="h-[var(--nav-height)] flex items-center justify-center p-2 shadow-[var(--shadow-1)] bg-[var(--background-secondary-color)] fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center justify-between h-full p-2 w-[var(--fluid-width)] max-w-[var(--max-width)] ">
-        <Logo path="/" hideText={false} />
+        <Logo path="/" hideText={false} className="h-full" />
         <div className="flex gap-2">
           <nav className="flex gap-4 items-center max-[576px]:hidden">
             <button className="text-[2rem]">
