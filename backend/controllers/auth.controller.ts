@@ -5,7 +5,6 @@ import userModel from "../models/user.model.js";
 import { USER_ROLES } from "../utils/constants.util.js";
 import { comparePassword, hashPassword } from "../utils/password.util.js";
 import { createJWT } from "../utils/token.util.js";
-import { sanitizeEmail } from "../utils/sanitize.util.js";
 
 export const registerUser: RequestHandler = async (req, res) => {
   const isFirstAccount = (await userModel.countDocuments()) === 0;
@@ -18,8 +17,7 @@ export const registerUser: RequestHandler = async (req, res) => {
 };
 
 export const loginUser: RequestHandler = async (req, res) => {
-  const sanitizedEmail = sanitizeEmail(req.body.email);
-  const user = await userModel.findOne({ email: sanitizeEmail });
+  const user = await userModel.findOne({ email: req.body.email });
   const isValidUser =
     user && (await comparePassword(req.body.password, user.password || ""));
   req.body.password = await hashPassword(req.body.password);
