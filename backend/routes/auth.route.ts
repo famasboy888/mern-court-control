@@ -1,7 +1,15 @@
 import { Router } from "express";
-import { registerUser } from "../controllers/auth.controller.js";
-import { validateRegisterInput } from "../middlewares/validation.middleware.js";
+import {
+  loginUser,
+  logout,
+  registerUser,
+} from "../controllers/auth.controller.js";
+import {
+  validateLoginInput,
+  validateRegisterInput,
+} from "../middlewares/validation.middleware.js";
 import rateLimit from "express-rate-limit";
+import { authenticateUser } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
@@ -12,5 +20,5 @@ const apiLimiter = rateLimit({
 });
 
 router.post("/register", apiLimiter, validateRegisterInput, registerUser);
-
+router.post("/login", apiLimiter, validateLoginInput, loginUser);
 export { router as authRouter };
